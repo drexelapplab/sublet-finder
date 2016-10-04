@@ -9,6 +9,10 @@
 import UIKit
 
 class TermAvailableControllerViewController: UIViewController {
+    @IBOutlet weak var springButton: TermAvailableButton!
+    @IBOutlet weak var summerButton: TermAvailableButton!
+    @IBOutlet weak var fallButton: TermAvailableButton!
+    @IBOutlet weak var winterButton: TermAvailableButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +25,8 @@ class TermAvailableControllerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
 
     /*
     // MARK: - Navigation
@@ -31,5 +37,7 @@ class TermAvailableControllerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }

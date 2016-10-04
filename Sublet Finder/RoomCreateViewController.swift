@@ -10,6 +10,14 @@ import UIKit
 
 class RoomCreateViewController: UIViewController {
 
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var streetAddress: UITextField!
+    @IBOutlet weak var rent: UITextField!
+    @IBOutlet weak var quarterAvailability: UISegmentedControl!
+    
+    @IBOutlet weak var sendButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +29,13 @@ class RoomCreateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func combineUserInput(){
+        
+    }
+    
+    @IBAction func send(_ sender: AnyObject) {
+        
+    }
 
     /*
     // MARK: - Navigation

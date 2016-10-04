@@ -9,7 +9,8 @@
 import UIKit
 
 class TermAvailableButton: UIButton {
-
+    fileprivate var availableState: Bool = false
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -17,5 +18,15 @@ class TermAvailableButton: UIButton {
         // Drawing code
     }
     */
+    
+    
+    func getAvailableState() -> Bool{
+        return availableState
+    }
+    
+    func setAvailableState(_ state: Bool){
+        availableState = state
+    }
+    
 
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class RoomSearchViewController: UIViewController {
 
@@ -19,6 +20,32 @@ class RoomSearchViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func loadView(){
+        //let geocoder = GMSGeocoder()
+        //geocoder.reverseGeocodeCoordinate("19104"){
+        //    if (status == google.maps.GeocoderStatus.OK){
+        //        map.setCenter(results[0].geometry.location)
+        //        var marker = google.maps.Marker(map,position:results[0].geometry.location)
+        //    }
+        //    else{
+        //        alert("Geocode was not successful for the following reason: " + status)
+        //    }
+            
+        //}
+        
+        let camera = GMSCameraPosition.camera(withLatitude: 39.95, longitude: -75.19, zoom: 12.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.isMyLocationEnabled = true
+        view = mapView
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: 39.95, longitude: -75.19)
+        marker.title = "Druxul"
+        marker.snippet = "University"
+        marker.map = mapView
+        
     }
     
 
